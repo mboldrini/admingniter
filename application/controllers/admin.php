@@ -16,10 +16,10 @@ class Admin extends CI_Controller {
 	}
 	
 	public function index(){
+		
 		if($this->session->userdata('perfil') == FALSE || $this->session->userdata('perfil') != 'administrador'){
 			redirect(base_url().'login');
 		}
-
 
 		# pega o nome do Usuario que tem na session e passa >
 		$nome = $this->session->userdata('username');
@@ -30,17 +30,12 @@ class Admin extends CI_Controller {
 			'pasta'			=> 'base',
 			'tela' 			=> 'content',
 			'titulo' 		=> 'Painel Administrativo',
-			'descricao' 	=> ' - Painel Geral do Sistema',
+			'descricao' 	=> ' - Informações Gerais',
 			'infos' 		=> $pegaInfos,
 		);
 
 		$this->load->view('tela',$dados);
 
-
-		//$data['titulo'] = 'Bienvenido Administrador';
-		//$this->load->view('admin_view',$data);
-
 	}
-
 
 }

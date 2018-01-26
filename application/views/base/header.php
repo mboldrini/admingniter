@@ -17,18 +17,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="<?= base_url(); ?>/assets/dist/css/skins/_all-skins.css">
   <link rel="stylesheet" href="<?= base_url(); ?>/assets/style.css">
 
-  <script src="<?= base_url(); ?>/assets/plugins/datatables/jquery.dataTables.js"></script>
-  <script src="<?= base_url(); ?>/assets/plugins/datatables/dataTables.bootstrap.min.js"></script>
-
-
-  <!-- valida o CPF/CNPJ na tela de cadastro do cliente -->
-  <script src="<?= base_url(); ?>assets/jquery.cpfcnpj.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
-
-  <!-- Script geral q faz o que eu preciso -->
-  <script src="<?= base_url(); ?>assets/script.js"></script>
-
 </head>
 <!--
 BODY TAG OPTIONS:
