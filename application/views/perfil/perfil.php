@@ -14,18 +14,6 @@
               		<p class="text-muted text-center">
               			<?php echo $infos[0]->descricao; ?>
           			</p>
-              		<ul class="list-group list-group-unbordered">
-                		<li class="list-group-item">
-                  			<b>Followers</b> <a class="pull-right">1,322</a>
-                		</li>
-                		<li class="list-group-item">
-                  			<b>Following</b> <a class="pull-right">543</a>
-                		</li>
-                		<li class="list-group-item">
-                  			<b>Friends</b> <a class="pull-right">13,287</a>
-                		</li>
-              		</ul>
-              		<a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
 				</div>
 			</div>
 
@@ -34,22 +22,10 @@
               		<h3 class="box-title">Sobre </h3>
             	</div>
             	<div class="box-body">
-              		<strong><i class="fa fa-book margin-r-5"></i> Formação</strong>
-              		<p class="text-muted">
-            			B.S. in Computer Science from the University of Tennessee at Knoxville
-              		</p><hr>
           			<strong><i class="fa fa-map-marker margin-r-5"></i> Cargo</strong>
-              		<p class="text-muted"><?php echo $infos[0]->descricao; ?></p><hr>
+              		<p class="text-muted"><?php echo $infos[0]->cargo; ?></p><hr>
               		<strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
-              		<p>
-                		<span class="label label-danger">UI Design</span>
-                		<span class="label label-success">Coding</span>
-                		<span class="label label-info">Javascript</span>
-                		<span class="label label-warning">PHP</span>
-                		<span class="label label-primary">Node.js</span>
-					</p><hr>
-					<strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+              		<p class="text-muted"><?php echo $infos[0]->habilidades; ?></p>
 		        </div>
           	</div>
 
@@ -89,46 +65,54 @@
 		                <form class="form-horizontal">
 
 			                <div class="form-group">
-			                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+			                    <label for="inputName" class="col-sm-2 control-label">Nome</label>
 			                    <div class="col-sm-10">
-			                    	<input type="email" class="form-control" id="inputName" placeholder="Name">
+			                    	<input type="text" class="form-control" id="nomeText" placeholder="Nome">
 			                    </div>
                   			</div>
+
+                  			<div class="form-group">
+			                    <label for="inputName" class="col-sm-2 control-label">Sobrenome</label>
+			                    <div class="col-sm-10">
+			                    	<input type="text" class="form-control" id="sobrenomeText" placeholder="Sobrenome">
+			                    </div>
+                  			</div>
+
+                  			<div class="form-group">
+			                    <label for="inputExperience" class="col-sm-2 control-label">Cargo</label>
+			                    <div class="col-sm-10">
+			                    	<input type="text" class="form-control" id="cargoText" placeholder="Cargo">
+			                    </div>
+		                  	</div>
+
 
 			                <div class="form-group">
 			                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
 			                    <div class="col-sm-10">
-				                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+				                    <input type="email" class="form-control" id="emailText" placeholder="Email">
 			                    </div>
 		                  	</div>
 
-			                <div class="form-group">
-			                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
+			             	<div class="form-group">
+		                	    <label for="inputSkills" class="col-sm-2 control-label">Habilidades</label>
 			                    <div class="col-sm-10">
-			                    	<textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+			                    	<input type="text" class="form-control" id="habilidadesText" placeholder="Habilidades">
 			                    </div>
 		                  	</div>
 
-			                <div class="form-group">
-		                	    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
+	                  	   	<div class="form-group">
+			                    <label for="inputExperience" class="col-sm-2 control-label">Descrição</label>
 			                    <div class="col-sm-10">
-			                    	<input type="text" class="form-control" id="inputSkills" placeholder="Skills">
-			                    </div>
-		                  	</div>
-
-                  			<div class="form-group">
-			                    <div class="col-sm-offset-2 col-sm-10">
-			                      	<div class="checkbox">
-			                        	<label>
-			                          		<input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
-			                        	</label>
-			                      	</div>
+			                    	<textarea class="form-control" id="descricaoText" placeholder="Descrição"></textarea>
 			                    </div>
 		                  	</div>
 
 		                  	<div class="form-group">
-			                    <div class="col-sm-offset-2 col-sm-10">
-			                      	<button type="submit" class="btn btn-danger">Submit</button>
+			                    <div class="col-sm-6 col-xs-6 col-md-6">
+			                      	<button type="submit" class="btn btn-primary">Salvar</button>
+			                    </div>
+		                    	<div class=" col-sm-6 col-xs-6 col-md-6">
+		                      		<button type="submit" class="pull-right btn btn-danger">Cancelar</button>
 			                    </div>
 			                </div>
 
@@ -138,7 +122,30 @@
               		<div class="tab-pane" id="senha">
 		                <form class="form-horizontal">
 							
-asfasfasfasfaf
+							<div class="form-group">
+		                	    <label for="inputSkills" class="col-sm-2 control-label">Nova Senha</label>
+			                    <div class="col-sm-10">
+			                    	<input type="text" class="form-control" id="novaSenhaText" placeholder="Nova Senha">
+			                    </div>
+		                  	</div>
+
+		                  	<div class="form-group">
+		                	    <label for="inputSkills" class="col-sm-2 control-label">Confirmar Senha</label>
+			                    <div class="col-sm-10">
+			                    	<input type="text" class="form-control" id="confirmaSenhaText" placeholder="Confirmação de Senha">
+			                    </div>
+		                  	</div>
+
+		                  	<div class="form-group">
+			                    <div class="col-sm-6 col-xs-6 col-md-6">
+			                      	<button type="submit" class="btn btn-primary">Salvar</button>
+			                    </div>
+		                    	<div class=" col-sm-6 col-xs-6 col-md-6">
+		                      		<button type="submit" class="pull-right btn btn-danger">Cancelar</button>
+			                    </div>
+			                </div>
+
+
                 		</form>
               		</div>
        

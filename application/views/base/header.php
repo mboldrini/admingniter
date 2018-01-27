@@ -70,7 +70,7 @@ desired effect
                 <img src="<?= base_url(); ?>/assets/images/mano.jpg" class="img-circle" alt="User Image">
                 <p>
                   <?php echo $infos[0]->nome; ?> <?php echo $infos[0]->sobrenome; ?>
-                  <small><?php echo $infos[0]->descricao; ?></small>
+                  <small><?php echo $infos[0]->cargo; ?></small>
                 </p>
               </li>
               <!-- Menu Footer-->
